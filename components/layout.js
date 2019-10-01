@@ -1,12 +1,12 @@
-import { Container } from "reactstrap";
-
 import Head from "./head";
+import Header from "./header";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Head />
-      <Container>{children}</Container>
+      <Header />
+      <div class="main-wrapper">{children}</div>
     </>
   );
 };
