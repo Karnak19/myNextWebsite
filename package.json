@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/Karnak19/myNextWebsite#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "next": "^9.0.7",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react-dom": "^16.10.1",
+    "reactstrap": "^8.0.1"
   },
   "devDependencies": {
     "husky": "^3.0.7",
