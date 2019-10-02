@@ -8,16 +8,21 @@ import {
   NavLink
 } from "reactstrap";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Bio from "./bio";
 import SocialList from "./socialList";
 
-const WithNavbar = props => {
+const WithNavbar = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [items, setItems] = useState([
-    { link: "/portfolio", label: "Portfolio" },
-    { link: "/resume", label: "Resume" }
+    { link: "/", icon: "fas fa-user", label: "About me" },
+    { link: "/portfolio", icon: "fas fa-laptop-code", label: "Portfolio" },
+    { link: "/resume", icon: "fas fa-file-alt", label: "Resume" },
+    { link: "/resume", icon: "fas fa-file-alt", label: "Resumeeeeeee" }
   ]);
+
   return (
     <>
       <Navbar expand="lg" dark>
@@ -41,12 +46,23 @@ const WithNavbar = props => {
             <SocialList />
             <hr />
           </div>
-          <Nav className="flex-column text-left" navbar>
-            {items.map(({ link, label }, i) => {
+          <Nav className="flex-column text-left fa-ul" navbar>
+            {items.map(({ link, label, icon }, i) => {
               return (
-                <NavItem key={i}>
+                <NavItem
+                  key={i}
+                  style={{ cursor: "pointer" }}
+                  active={router.pathname === link ? true : false}
+                >
                   <Link href={link}>
-                    <NavLink>{label}</NavLink>
+                    <NavLink>
+                      {icon ? (
+                        <span className="fa-li">
+                          <i class={icon}></i>
+                        </span>
+                      ) : null}
+                      {label}
+                    </NavLink>
                   </Link>
                 </NavItem>
               );
