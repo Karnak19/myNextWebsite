@@ -20,7 +20,7 @@ const WithNavbar = () => {
     { link: "/", icon: "fas fa-user", label: "About me" },
     { link: "/portfolio", icon: "fas fa-laptop-code", label: "Portfolio" },
     { link: "/resume", icon: "fas fa-file-alt", label: "Resume" },
-    { link: "/resume", icon: "fas fa-file-alt", label: "Resumeeeeeee" }
+    { link: "/contact", icon: "fas fa-paper-plane", label: "Contact me" }
   ]);
 
   return (
@@ -39,9 +39,9 @@ const WithNavbar = () => {
               src="/static/portrait.jpg"
               alt=""
             />
-            <Bio>
-              Hi, my name is Basile Vernouille and I'm a React & NodeJS trainer.
-              Welcome to my personal website!
+            <Bio mb="3">
+              Hi, my name is Basile Vernouillet and I'm a React & NodeJS
+              trainer. Welcome to my personal website!
             </Bio>
             <SocialList />
             <hr />
@@ -58,7 +58,7 @@ const WithNavbar = () => {
                     <NavLink>
                       {icon ? (
                         <span className="fa-li">
-                          <i class={icon}></i>
+                          <i className={icon}></i>
                         </span>
                       ) : null}
                       {label}

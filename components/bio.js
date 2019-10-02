@@ -1,5 +1,5 @@
-const Bio = ({ children }) => {
-  return <div className="bio mb-3">{children}</div>;
+const Bio = ({ mb, children }) => {
+  return <div className={`bio mb-${mb}`}>{children}</div>;
 };
 
 export default Bio;
