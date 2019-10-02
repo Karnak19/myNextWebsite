@@ -3,9 +3,9 @@ import ThemeNavBar from "./navbar";
 
 const Header = () => {
   return (
-    <header class="header text-center">
-      <div class="force-overflow">
-        <h1 class="blog-name pt-lg-4 mb-0">Basile Vernouillet</h1>
+    <header className="header text-center">
+      <div className="force-overflow">
+        <h1 className="blog-name pt-lg-4 mb-0">Basile Vernouillet</h1>
         <ThemeNavBar />
       </div>
     </header>

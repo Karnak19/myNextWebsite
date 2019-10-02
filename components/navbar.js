@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 
 import Bio from "./bio";
+import SocialList from "./socialList";
 
 const WithNavbar = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +28,9 @@ const WithNavbar = props => {
           isOpen={isOpen}
           navbar
         >
-          <div class="profile-section pt-3 pt-lg-0">
+          <div className="profile-section pt-3 pt-lg-0">
             <img
-              class="pofile-image mb-3 rounded-circle mx-auto"
+              className="pofile-image mb-3 rounded-circle mx-auto"
               src="/static/portrait.jpg"
               alt=""
             />
@@ -37,11 +38,13 @@ const WithNavbar = props => {
               Hi, my name is Basile Vernouille and I'm a React & NodeJS trainer.
               Welcome to my personal website!
             </Bio>
+            <SocialList />
+            <hr />
           </div>
           <Nav className="flex-column text-left" navbar>
             {items.map(({ link, label }, i) => {
               return (
-                <NavItem>
+                <NavItem key={i}>
                   <Link href={link}>
                     <NavLink>{label}</NavLink>
                   </Link>
