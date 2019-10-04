@@ -10,10 +10,6 @@ const WithHead = () => {
         rel="stylesheet"
       />
       <link rel="stylesheet" href="/static/theme-1.css" />
-      <script
-        src="https://kit.fontawesome.com/a53d6da310.js"
-        crossOrigin="anonymous"
-      ></script>
     </Head>
   );
 };

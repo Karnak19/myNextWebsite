@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   Collapse,
   Navbar,
@@ -7,8 +9,13 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faLaptopCode,
+  faFileAlt,
+  faPaperPlane
+} from "@fortawesome/free-solid-svg-icons";
 
 import Bio from "./bio";
 import SocialList from "./socialList";
@@ -17,10 +24,10 @@ const WithNavbar = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [items, setItems] = useState([
-    { link: "/", icon: "fas fa-user", label: "About me" },
-    { link: "/portfolio", icon: "fas fa-laptop-code", label: "Portfolio" },
-    { link: "/resume", icon: "fas fa-file-alt", label: "Resume" },
-    { link: "/contact", icon: "fas fa-paper-plane", label: "Contact me" }
+    { link: "/", icon: faUser, label: "About me" },
+    { link: "/portfolio", icon: faLaptopCode, label: "Portfolio" },
+    { link: "/resume", icon: faFileAlt, label: "Resume" },
+    { link: "/contact", icon: faPaperPlane, label: "Contact me" }
   ]);
 
   return (
@@ -58,7 +65,7 @@ const WithNavbar = () => {
                     <NavLink>
                       {icon ? (
                         <span className="fa-li">
-                          <i className={icon}></i>
+                          <FontAwesomeIcon icon={icon} size="lg" />
                         </span>
                       ) : null}
                       {label}

@@ -22,6 +22,11 @@
   },
   "homepage": "https://github.com/Karnak19/myNextWebsite#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
     "@zeit/next-css": "^1.0.1",
     "next": "^9.0.7",
     "react": "^16.10.1",

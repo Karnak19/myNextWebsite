@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFileAlt,
+  faArrowCircleRight
+} from "@fortawesome/free-solid-svg-icons";
 
 import Section from "./section";
 import Bio from "./bio";
@@ -17,12 +22,18 @@ const Teaser = ({ name, job }) => {
           <div className="mb-4">
             <Link href="/portfolio">
               <a className="btn btn-primary mr-2 mb-3">
-                <i className="fas fa-arrow-circle-right mr-1"></i> See Portfolio
+                <FontAwesomeIcon
+                  icon={faArrowCircleRight}
+                  size="lg"
+                  className="mr-1"
+                />{" "}
+                See Portfolio
               </a>
             </Link>
             <Link href="/resume">
               <a className="btn btn-secondary mb-3">
-                <i className="fas fa-file-alt mr-1"></i> See Resume
+                <FontAwesomeIcon icon={faFileAlt} size="lg" className="mr-1" />{" "}
+                See Resume
               </a>
             </Link>
           </div>

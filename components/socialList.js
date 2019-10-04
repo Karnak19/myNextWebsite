@@ -1,23 +1,31 @@
-import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedinIn,
+  faDev,
+  faGithub,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const socials = [
   {
     link: "https://www.linkedin.com/in/basile-vernouillet",
-    icon: "fab fa-linkedin-in"
+    icon: faLinkedinIn
   },
-  { link: "https://github.com/Karnak19", icon: "fab fa-github" },
-  { link: "https://dev.to/karnak19", icon: "fab fa-dev" },
-  { link: "https://www.instagram.com/basile_vern/", icon: "fab fa-instagram" }
+  { link: "https://github.com/Karnak19", icon: faGithub },
+  { link: "https://dev.to/karnak19", icon: faDev },
+  { link: "https://www.instagram.com/basile_vern/", icon: faInstagram }
 ];
 
-const SocialList = props => {
+const SocialList = () => {
   return (
     <ul className="social-list list-inline py-2 mx-auto">
       {socials.map(({ link, icon }, i) => {
         return (
           <li className="list-inline-item" key={i}>
             <a href={link}>
-              <i className={icon} style={{ color: "white" }}></i>
+              <FontAwesomeIcon icon={icon} size="1x" />
             </a>
           </li>
         );
