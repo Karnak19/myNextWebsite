@@ -10044,6 +10044,9 @@ hr {
   font-size: 1.875rem;
   color: #54b689;
 }
+.overview-section .item-icon .fa-git-alt {
+  color: #f64d27;
+}
 .overview-section .item-icon .fa-angular {
   color: #ca3327;
 }
