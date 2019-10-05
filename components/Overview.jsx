@@ -9,24 +9,30 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Section from "./Section";
-import Skills from "./Skills";
+import WithSkills from "./WithSkills";
 
 const Overview = () => {
   const [skills, setSkills] = useState([
     {
       id: 1,
-      icons: [faJsSquare]
+      icons: [faJsSquare],
+      title: "JavaScript",
+      desc: ""
     },
     {
       id: 2,
-      icons: [faReact, faVuejs]
+      icons: [faReact, faVuejs, "redux"],
+      title: "Front End Development",
+      desc: ""
     },
     {
       id: 3,
-      icons: [faNodeJs]
+      icons: [faNodeJs],
+      title: "Back End Development",
+      desc: ""
     },
-    { id: 4, icons: [faBootstrap] },
-    { id: 5, icons: [faUbuntu] }
+    { id: 4, icons: [faBootstrap], title: "", desc: "" },
+    { id: 5, icons: [faUbuntu], title: "Environment", desc: "" }
   ]);
   return (
     <Section section="overview" title="What do I do">
@@ -35,7 +41,7 @@ const Overview = () => {
         non voluptates possimus exercitationem eaque. Error voluptates facilis
         aut incidunt necessitatibus?
       </div>
-      <Skills skills={skills} />
+      <WithSkills skills={skills} />
     </Section>
   );
 };
