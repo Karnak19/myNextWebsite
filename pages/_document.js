@@ -5,7 +5,7 @@ class CustomDocument extends Document {
     return (
       <html lang="en-US">
         <Head></Head>
-        <body class="dark-mode">
+        <body className="dark-mode">
           <Main />
           <NextScript />
         </body>

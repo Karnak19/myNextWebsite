@@ -17,8 +17,8 @@ import {
   faPaperPlane
 } from "@fortawesome/free-solid-svg-icons";
 
-import Bio from "./bio";
-import SocialList from "./socialList";
+import Bio from "./Bio";
+import SocialList from "./SocialList";
 
 const WithNavbar = () => {
   const router = useRouter();

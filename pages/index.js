@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
-import Teaser from "../components/teaser";
-import Hr from "../components/hr";
+import Layout from "../components/Layout";
+import Teaser from "../components/Teaser";
+import Hr from "../components/Hr";
 
 const Home = () => {
   return (

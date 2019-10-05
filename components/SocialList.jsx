@@ -24,7 +24,7 @@ const SocialList = () => {
       {socials.map(({ link, icon }, i) => {
         return (
           <li className="list-inline-item" key={i}>
-            <a href={link}>
+            <a href={link} rel="nofollow noopener noreferrer" target="_blank">
               <FontAwesomeIcon icon={icon} size="1x" />
             </a>
           </li>

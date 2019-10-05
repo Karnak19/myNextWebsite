@@ -1,6 +1,6 @@
 import Head from "./head";
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const Layout = ({ children }) => {

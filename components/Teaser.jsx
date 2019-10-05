@@ -5,8 +5,8 @@ import {
   faArrowCircleRight
 } from "@fortawesome/free-solid-svg-icons";
 
-import Section from "./section";
-import Bio from "./bio";
+import Section from "./Section";
+import Bio from "./Bio";
 
 const Teaser = ({ name, job }) => {
   return (
