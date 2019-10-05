@@ -6,7 +6,7 @@ const Skills = ({ skills }) => {
     <Row>
       {skills.map(({ id, icons }) => {
         return (
-          <Col lg={3}>
+          <Col lg={3} className="item">
             <div className="item-inner">
               <div className="item-icon">
                 {icons.map(icon => (

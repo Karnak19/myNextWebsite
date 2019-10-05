@@ -10047,6 +10047,12 @@ hr {
 .overview-section .item-icon .fa-angular {
   color: #ca3327;
 }
+.overview-section .item-icon .fa-bootstrap {
+  color: #563d7c;
+}
+.overview-section .item-icon .fa-ubuntu {
+  color: #e95420;
+}
 .overview-section .item-icon .fa-js-square {
   color: #f1de4f;
 }
