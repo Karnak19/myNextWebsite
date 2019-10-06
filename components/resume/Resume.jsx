@@ -1,5 +1,8 @@
 import ResumeHeader from "./Header";
 import ResumeIntro from "./Intro";
+import ResumeBody from "./Body";
+import ResumeMain from "./Main";
+import ResumeAside from "./Aside";
 
 const Resume = () => {
   return (
@@ -7,6 +10,11 @@ const Resume = () => {
       <ResumeHeader />
       <hr />
       <ResumeIntro />
+      <hr />
+      <ResumeBody>
+        <ResumeMain />
+        <ResumeAside />
+      </ResumeBody>
       <hr />
     </article>
   );

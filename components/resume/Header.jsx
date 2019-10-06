@@ -33,7 +33,7 @@ const ResumeHeader = () => {
   return (
     <div className="resume-header">
       <Row className="align-items-center">
-        <Col md={8} lg={8} xl={9} xs={12} classNam="resume-title">
+        <Col md={8} lg={8} xl={9} xs={12} className="resume-title">
           <h2 className="resume-name mb-0 text-uppercase">
             Basile Vernouillet
           </h2>

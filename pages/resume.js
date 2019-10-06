@@ -11,7 +11,7 @@ const ResumePage = () => {
       <Section section="cta" textCenter>
         <HeadResume />
       </Section>
-      <Container className="px-3 lx-lg-5">
+      <Container className="px-3 px-lg-5">
         <Resume />
       </Container>
     </Layout>

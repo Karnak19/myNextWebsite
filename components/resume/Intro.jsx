@@ -3,7 +3,7 @@ const Intro = () => {
     <div className="resume-intro py-3">
       <div className="media flex-column flex-md-row align-items-center">
         <img
-          className="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto"
+          className="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded-circle mx-auto"
           src="/static/portrait.jpg"
         />
         <div className="media-body text-left">
