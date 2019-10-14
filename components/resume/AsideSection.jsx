@@ -7,8 +7,12 @@ const AsideSection = ({ section, title, items }) => {
           <div className="item">
             <h4 className="item-title">{itemTitle}</h4>
             <ul className={`list-unstyled resume-${section}-list`}>
-              {list.map(li => {
-                return <li className="mb-2">{li}</li>;
+              {list.map((li, i) => {
+                return (
+                  <li className="mb-2" key={i}>
+                    {li}
+                  </li>
+                );
               })}
             </ul>
           </div>
