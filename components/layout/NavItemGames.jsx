@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { NavItem, NavLink } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 const NavItemGames = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,7 +20,7 @@ const NavItemGames = () => {
   return (
     <NavItem style={{ cursor: 'pointer' }} className={`dropdown ${isDropdownOpen ? `show` : null}`}>
       <NavLink onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="dropdown-toggle">
-        <FontAwesomeIcon icon={faCogs} className="mr-2" fixedWidth />
+        <FontAwesomeIcon icon={faGamepad} className="mr-2" fixedWidth />
         See more
       </NavLink>
       <div className={`dropdown-menu ${isDropdownOpen ? `show` : ``}`}>
