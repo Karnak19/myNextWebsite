@@ -1,6 +1,6 @@
-import { Col } from "reactstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReduxSvg } from "./ReduxSvg";
+import { Col } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ReduxSvg } from './ReduxSvg';
 
 const Skill = ({ id, icons, title, desc }) => {
   return (
@@ -8,8 +8,8 @@ const Skill = ({ id, icons, title, desc }) => {
       <div className="item-inner">
         <div className="item-icon">
           {icons.map((icon, i) => {
-            return icon === "redux" ? (
-              <ReduxSvg />
+            return icon === 'redux' ? (
+              <ReduxSvg key={i} />
             ) : (
               <FontAwesomeIcon key={id + i} icon={icon} />
             );
