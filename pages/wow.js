@@ -18,9 +18,10 @@ const WoW = ({ profile, progress, mythic_plus }) => {
           <h2 className="heading text-center"> World of Warcraft</h2>
           <div className="project-intro text-center">
             <p className="mb-0 lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat molestiae
-              distinctio pariatur, quam ea quae mollitia. Odio, cum sint quis consectetur alias quae
-              amet, soluta voluptas delectus nesciunt reprehenderit.
+              World of Warcraft is a great game. I mostly enjoy the End-game content, particularly
+              PvE. In End-game PvE, you need a lot of teamwork, to make a 20-man team cooperate in
+              the same way. Being selfish does not work in this environment, as every player here
+              will play a huge role to defeat each bosses.
             </p>
           </div>
         </Container>
