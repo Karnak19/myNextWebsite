@@ -2,10 +2,15 @@ import axios from 'axios';
 import { Container } from 'reactstrap';
 
 import Layout from '../components/layout/Layout';
-import Section from '../components/Section';
-import SectionProject from '../components/ProjectSection';
+import Content from '../components/games/Content';
+import CharProfile from '../components/games/CharProfile';
+import CharProgress from '../components/games/CharProgress';
+import WithProjectSection from '../components/games/WithProjectSection';
+import CharMythicPlus from '../components/games/CharMythicPlus';
 
-const WoW = ({ profile, progress }) => {
+const WoW = ({ profile, progress, mythic_plus }) => {
+  console.log(mythic_plus);
+
   return (
     <Layout>
       <section className="cta-section py-5">
@@ -20,14 +25,20 @@ const WoW = ({ profile, progress }) => {
           </div>
         </Container>
       </section>
-      <SectionProject {...profile} />
+      <Content>
+        <CharProfile {...profile} />
+        <WithProjectSection>
+          <CharProgress {...progress} />
+          <CharMythicPlus runs={mythic_plus} />
+        </WithProjectSection>
+      </Content>
     </Layout>
   );
 };
 
 WoW.getInitialProps = async ({ req }) => {
   const res = await axios.get(
-    'https://raider.io/api/v1/characters/profile?region=eu&realm=hyjal&name=raquette&fields=gear%2Cguild%2Craid_progression'
+    'https://raider.io/api/v1/characters/profile?region=eu&realm=hyjal&name=raquette&fields=gear%2Cguild%2Craid_progression%2Cmythic_plus_best_runs'
   );
   const datas = res.data;
 
@@ -43,7 +54,8 @@ WoW.getInitialProps = async ({ req }) => {
       url: datas.profile_url,
       guild: datas.guild.name
     },
-    progress: datas.raid_progression
+    progress: datas.raid_progression,
+    mythic_plus: datas.mythic_plus_best_runs
   };
 };
 
