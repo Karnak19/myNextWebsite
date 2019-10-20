@@ -4,6 +4,13 @@ import { jadenCase } from '../../util';
 import RaidProgressBar from './RaidProgressBar';
 
 const CharProgress = props => {
+  const rejectedRaids = [
+    'Antorus The Burning Throne',
+    'The Emerald Nightmare',
+    'Trial Of Valor',
+    'Tomb Of Sargeras',
+    'The Nighthold'
+  ];
   let raids = Object.entries(props)
     .map(([key, value]) => ({
       name: jadenCase(key.replace(/-/g, ' ')),

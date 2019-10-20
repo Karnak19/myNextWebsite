@@ -1,7 +1,7 @@
 import ComingSoon from '../components/ComingSoon';
 
-const Portfolio = () => {
+const ApexLegends = () => {
   return <ComingSoon />;
 };
 
-export default Portfolio;
+export default ApexLegends;

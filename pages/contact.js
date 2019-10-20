@@ -1,7 +1,7 @@
 import ComingSoon from '../components/ComingSoon';
 
-const Portfolio = () => {
+const Contact = () => {
   return <ComingSoon />;
 };
 
-export default Portfolio;
+export default Contact;
