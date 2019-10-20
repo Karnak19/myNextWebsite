@@ -4,7 +4,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const DungeonUpgrade = ({ upgrade }) => {
   const stars = [];
-  console.log(stars);
 
   for (let i = 0; i < upgrade; i++) {
     stars.push(' ');
