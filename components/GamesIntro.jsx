@@ -18,12 +18,12 @@ const GamesIntro = () => {
     {
       label: 'WoW',
       url: '/wow',
-      img: 'https://i.imgur.com/buKcAHw.png'
+      img: 'static/raquette.png'
     },
     {
       label: 'Apex Legends',
       url: '/apex',
-      img: 'http://image.jeuxvideo.com/medias-sm/155137/1551371304-2322-jaquette-avant.jpg'
+      img: 'static/apex.jpg'
     }
   ];
   return (

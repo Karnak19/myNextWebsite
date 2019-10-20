@@ -46,7 +46,7 @@ WoW.getInitialProps = async ({ req }) => {
       pseudo: datas.name,
       realm: datas.realm,
       race: datas.race,
-      image: 'https://i.imgur.com/buKcAHw.png',
+      image: 'static/raquette.png',
       faction: datas.faction,
       ilv_max: datas.gear.item_level_total,
       woWClass: `${datas.active_spec_name} ${datas.class}`,
