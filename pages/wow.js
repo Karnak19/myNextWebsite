@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Container } from 'reactstrap';
 
-import Layout from '../components/layout/Layout';
 import Content from '../components/games/Content';
 import CharProfile from '../components/games/CharProfile';
 import CharProgress from '../components/games/CharProgress';
@@ -9,10 +8,8 @@ import WithProjectSection from '../components/games/WithProjectSection';
 import CharMythicPlus from '../components/games/CharMythicPlus';
 
 const WoW = ({ profile, progress, mythic_plus }) => {
-  console.log(mythic_plus);
-
   return (
-    <Layout>
+    <>
       <section className="cta-section py-5">
         <Container className="single-col-max-width">
           <h2 className="heading text-center"> World of Warcraft</h2>
@@ -33,7 +30,7 @@ const WoW = ({ profile, progress, mythic_plus }) => {
           <CharMythicPlus runs={mythic_plus} />
         </WithProjectSection>
       </Content>
-    </Layout>
+    </>
   );
 };
 
@@ -41,6 +38,11 @@ WoW.getInitialProps = async ({ req }) => {
   const res = await axios.get(
     'https://raider.io/api/v1/characters/profile?region=eu&realm=hyjal&name=raquette&fields=gear%2Cguild%2Craid_progression%2Cmythic_plus_best_runs'
   );
+  const ress = await axios.get(
+    'https://cors-anywhere.herokuapp.com/https://raider.io/api/guilds/eu/tarren mill/Method/roster'
+  );
+  console.log(ress.data);
+
   const datas = res.data;
 
   return {
