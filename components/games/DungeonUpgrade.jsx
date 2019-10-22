@@ -11,9 +11,9 @@ const DungeonUpgrade = ({ upgrade }) => {
   if (stars.length >= 1) {
     return (
       <Col xs="6" sm="6" lg="12" xl="12">
-        {stars.map(() => {
+        {stars.map((_, i) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={i}>
               Upgrade : <FontAwesomeIcon icon={faStar} style={{ color: 'yellow' }} />
             </React.Fragment>
           );
