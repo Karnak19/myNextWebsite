@@ -32,7 +32,7 @@ const Teaser = ({ name, job }) => {
         </div>
         <img
           className="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0"
-          src="/static/selfie.jpg"
+          src="/static/selfie.webp"
           alt=""
         />
       </div>

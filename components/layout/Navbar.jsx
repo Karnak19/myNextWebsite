@@ -24,7 +24,7 @@ const WithNavbar = () => {
           <div className="profile-section pt-3 pt-lg-0">
             <img
               className="pofile-image mb-3 rounded-circle mx-auto"
-              src="/static/portrait.jpg"
+              src="/static/portrait.webp"
               alt=""
             />
             <Bio mb="3">
