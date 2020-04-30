@@ -8,7 +8,8 @@ const CharProgress = props => {
     'Battle Of Dazaralor',
     'Crucible Of Storms',
     'Uldir',
-    'The Eternal Palace'
+    'The Eternal Palace',
+    'Nyalotha The Waking City'
   ];
   let raids = Object.entries(props)
     .map(([key, value]) => ({

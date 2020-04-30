@@ -10,7 +10,17 @@ import {
   faArrowCircleRight
 } from '@fortawesome/free-solid-svg-icons';
 
-const CharProfile = ({ image, pseudo, faction, race, woWClass, ilv_max, realm, guild }) => {
+const CharProfile = ({
+  image,
+  pseudo,
+  faction,
+  race,
+  woWClass,
+  ilv_max,
+  realm,
+  guild,
+  bust_url
+}) => {
   const [charDatas, setCharDatas] = useState([
     {
       icon: faHome,
@@ -71,6 +81,11 @@ const CharProfile = ({ image, pseudo, faction, race, woWClass, ilv_max, realm, g
         src={image}
         alt=""
         className="project-thumb mb-3 mb-md-0 mr-md-5 rounded d-none d-md-inline-block"
+      />
+      <img
+        src={bust_url}
+        alt=""
+        className="project-thumb mb-3 mb-md-0 mr-md-5 rounded inline-block d-md-none"
       />
       <div className="media-body">
         <div className="client-info">

@@ -15,6 +15,7 @@ const Aside = () => {
             'ReactJS / Redux',
             'VueJS / Vuex',
             'NodeJS / Express',
+            'Mocha / Chai',
             'Sequelize (ORM)',
             'Rest/GraphQL designs',
             'MySQL / Postgres',
