@@ -38,11 +38,11 @@ WoW.getInitialProps = async ({ req }) => {
   const res = await axios.get(
     'https://raider.io/api/v1/characters/profile?region=eu&realm=hyjal&name=raquette&fields=gear%2Cguild%2Craid_progression%2Cmythic_plus_best_runs'
   );
-  const {
-    data: { render_url, bust_url }
-  } = await axios.get(
-    'https://eu.api.blizzard.com/profile/wow/character/hyjal/raquette/character-media?namespace=profile-eu&locale=en_US&access_token=USdxU2cGg3EIixIZM9BVIM5Y1NQ4oEwVbA'
-  );
+  // const {
+  //   data: { render_url, bust_url }
+  // } = await axios.get(
+  //   'https://eu.api.blizzard.com/profile/wow/character/hyjal/raquette/character-media?namespace=profile-eu&locale=en_US&access_token=USdxU2cGg3EIixIZM9BVIM5Y1NQ4oEwVbA'
+  // );
 
   const datas = res.data;
   // console.log(datas);
@@ -56,9 +56,9 @@ WoW.getInitialProps = async ({ req }) => {
       ilv_max: datas.gear.item_level_total,
       woWClass: `${datas.active_spec_name} ${datas.class}`,
       url: datas.profile_url,
-      guild: datas.guild.name,
-      render_url,
-      bust_url
+      guild: datas.guild.name
+      // render_url,
+      // bust_url
     },
     progress: datas.raid_progression,
     mythic_plus: datas.mythic_plus_best_runs
